@@ -10,3 +10,5 @@ from .__pkg__ import (
     __email__,
     __license__
 )
+
+from .arrays import construct
