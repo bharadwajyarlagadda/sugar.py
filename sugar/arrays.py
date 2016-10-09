@@ -5,7 +5,7 @@ from __future__ import absolute_import
 
 def construct(var, func):
     """Constructs an array of :attr:`var` length from the values of
-    attr:`func`.
+    :attr:`func`.
 
     Args:
         var (int): Length of the array intended.
