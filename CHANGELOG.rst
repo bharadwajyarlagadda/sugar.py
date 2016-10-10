@@ -3,4 +3,5 @@ Changelog
 
 
 - First release.
-- Add ``construct()``
+- Add ``construct()``.
+- Add ``count()``.

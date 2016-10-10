@@ -11,4 +11,7 @@ from .__pkg__ import (
     __license__
 )
 
-from .arrays import construct
+from .arrays import (
+    construct,
+    count
+)

@@ -2,4 +2,5 @@
 API Reference
 =============
 
-.. autofunction:: sugar.construct
+.. automodule:: sugar.arrays
+    :members:
