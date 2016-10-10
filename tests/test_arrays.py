@@ -3,6 +3,7 @@
 from .fixtures import parametrize
 
 from sugar import (
+    average,
     construct,
     count
 )
@@ -16,6 +17,14 @@ def double(variable):
 def triple(variable):
     """Returns thrice of a variable."""
     return variable * 3
+
+
+@parametrize('array,expected_average', [
+    ([1, 2, 3], 2)
+])
+def test_average(array, expected_average):
+    """Tests whether the average method is working properly or not."""
+    assert average(array) == expected_average
 
 
 @parametrize('length,callback,expected_output', [

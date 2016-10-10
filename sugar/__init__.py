@@ -12,6 +12,7 @@ from .__pkg__ import (
 )
 
 from .arrays import (
+    average,
     construct,
     count
 )

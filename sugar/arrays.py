@@ -3,6 +3,25 @@
 from __future__ import absolute_import
 
 
+def average(array):
+    """Returns the average for all the values in the given :attr:`array`.
+
+    Args:
+        array (list): List of values.
+
+    Returns:
+        int/float: Average of all the values in the given list.
+
+    Example:
+
+        >>> average([1, 2, 3])
+        2.0
+
+    .. versionadded:: 0.1.0-dev
+    """
+    return sum(array) / len(array)
+
+
 def construct(var, callback):
     """Constructs an array of :attr:`var` length from the values of
     :attr:`callback`.
