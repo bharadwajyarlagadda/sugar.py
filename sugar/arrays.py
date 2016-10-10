@@ -14,7 +14,7 @@ def average(array):
 
     Example:
 
-        >>> average([1, 2, 3])
+        >>> float(average([1, 2, 3]))
         2.0
 
     .. versionadded:: 0.1.0-dev
