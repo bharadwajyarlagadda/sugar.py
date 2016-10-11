@@ -43,6 +43,33 @@ def clone(array):
     return copy.copy(array)
 
 
+def compact(array, all=False):
+    """Removes all instances of None, False, empty strings. This includes
+    None, False, and empty strings.
+
+    Args:
+        array (list): List of values provided by the user.
+        all (bool): Boolean value to remove all the instances of None, False
+            and empty strings.
+
+    Returns:
+        list: List of values with all falsy elements removed.
+
+    Example:
+
+        >>> compact([1, None, 2, False, 3])
+        [1, 2, False, 3]
+        >>> compact([1, None, '', False, 2], all=True)
+        [1, 2]
+
+    .. versionadded:: 0.2.0-dev
+    """
+    if all:
+        return subtract(array, [None, False, ''])
+
+    return subtract(array, None)
+
+
 def construct(var, callback):
     """Constructs an array of :attr:`var` length from the values of
     :attr:`callback`.

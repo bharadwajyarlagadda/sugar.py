@@ -3,6 +3,7 @@ Changelog
 
 
 - Add ``clone()`` method.
+- Add ``compact()`` method.
 
 
 v0.1.1 (2016-10-10)

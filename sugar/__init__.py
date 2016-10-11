@@ -14,6 +14,7 @@ from .__pkg__ import (
 from .arrays import (
     average,
     clone,
+    compact,
     construct,
     count,
     subtract

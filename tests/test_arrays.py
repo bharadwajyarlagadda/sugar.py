@@ -5,6 +5,7 @@ from .fixtures import parametrize
 from sugar import (
     average,
     clone,
+    compact,
     construct,
     count,
     subtract
@@ -35,6 +36,15 @@ def test_average(array, expected_average):
 def test_clone(array, expected_output):
     """Tests whether the clone method is working properly or not."""
     assert clone(array) == expected_output
+
+
+@parametrize('array,all,expected_output', [
+    ([1, None, '', 2], False, [1, '', 2]),
+    ([1, None, '', False, 2], True, [1, 2])
+])
+def test_compact(array, all, expected_output):
+    """Tests whether the compact method is working properly or not."""
+    assert compact(array, all) == expected_output
 
 
 @parametrize('length,callback,expected_output', [

@@ -36,6 +36,14 @@ Install using pip:
     >>> float(sugar.average([1, 2, 3]))
     2.0
 
+    >>> sugar.clone([1, 2, 3])
+    [1, 2, 3]
+
+    >>> sugar.compact([1, None, 2, False, 3])
+    [1, 2, False, 3]
+    >>> sugar.compact([1, None, '', False, 2], all=True)
+    [1, 2]
+
     >>> sugar.construct(4, lambda x: x * 2)
     [0, 2, 4, 6]
 
@@ -47,9 +55,6 @@ Install using pip:
     >>> sugar.subtract ([1, 2, 3], [1, 3])
     [2]
     >>> sugar.subtract([1, 2, 3], 4)
-    [1, 2, 3]
-
-    >>> sugar.clone([1, 2, 3])
     [1, 2, 3]
 
 
