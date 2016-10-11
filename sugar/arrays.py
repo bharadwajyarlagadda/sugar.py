@@ -17,7 +17,7 @@ def average(array):
         >>> float(average([1, 2, 3]))
         2.0
 
-    .. versionadded:: 0.1.0-dev
+    .. versionadded:: 0.1.0
     """
     return sum(array) / len(array)
 
@@ -39,7 +39,7 @@ def construct(var, callback):
         >>> construct(4, lambda x: x * 2)
         [0, 2, 4, 6]
 
-    .. versionadded:: 0.1.0-dev
+    .. versionadded:: 0.1.0
     """
     return [callback(i) for i in range(0, var)]
 
@@ -60,7 +60,7 @@ def count(array, value):
         >>> count([1, 2, 3, 3], 3)
         2
 
-    .. versionadded:: 0.1.0-dev
+    .. versionadded:: 0.1.0
     """
     return array.count(value)
 
@@ -87,7 +87,7 @@ def subtract(array, item):
         >>> subtract([1, 2, 3], 4)
         [1, 2, 3]
 
-    .. versionadded:: 0.1.0-dev
+    .. versionadded:: 0.1.0
     """
     if not isinstance(item, list):
         # If item is not a list, convert it into list.
