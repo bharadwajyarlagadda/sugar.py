@@ -4,6 +4,7 @@ from .fixtures import parametrize
 
 from sugar import (
     average,
+    clone,
     construct,
     count,
     subtract
@@ -26,6 +27,14 @@ def triple(variable):
 def test_average(array, expected_average):
     """Tests whether the average method is working properly or not."""
     assert average(array) == expected_average
+
+
+@parametrize('array,expected_output', [
+    ([1, 2, 3], [1, 2, 3])
+])
+def test_clone(array, expected_output):
+    """Tests whether the clone method is working properly or not."""
+    assert clone(array) == expected_output
 
 
 @parametrize('length,callback,expected_output', [

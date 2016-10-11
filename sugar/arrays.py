@@ -2,6 +2,8 @@
 
 from __future__ import absolute_import
 
+import copy
+
 
 def average(array):
     """Returns the average for all the values in the given :attr:`array`.
@@ -20,6 +22,25 @@ def average(array):
     .. versionadded:: 0.1.0
     """
     return sum(array) / len(array)
+
+
+def clone(array):
+    """Returns a shallow copy of the given list.
+
+    Args:
+        array (list): List of values provided by the user.
+
+    Returns:
+        list: Shallow copy of the given array.
+
+    Example:
+
+        >>> clone([1, 2, 3])
+        [1, 2, 3]
+
+    .. versionadded:: 0.2.0-dev
+    """
+    return copy.copy(array)
 
 
 def construct(var, callback):
