@@ -18,5 +18,6 @@ from .arrays import (
     construct,
     count,
     every,
+    exclude,
     subtract
 )

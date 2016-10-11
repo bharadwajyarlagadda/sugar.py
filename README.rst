@@ -55,6 +55,13 @@ Install using pip:
     >>> every([2, 2, 3], 2)
     False
 
+    >>> exclude([11, 22, 33], 22)
+    [11, 33]
+    >>> exclude([11, 22, 33], 44)
+    [11, 22, 33]
+    >>> exclude([11, 22, 33], [11, 22])
+    [33]
+
     >>> sugar.subtract([1, 2, 3], 2)
     [1, 3]
     >>> sugar.subtract ([1, 2, 3], [1, 3])

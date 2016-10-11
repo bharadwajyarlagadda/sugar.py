@@ -5,6 +5,7 @@ Changelog
 - Add ``clone()``.
 - Add ``compact()``.
 - Add ``every()``.
+- Add ``exclude()``.
 
 
 v0.1.1 (2016-10-10)

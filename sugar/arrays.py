@@ -138,6 +138,31 @@ def every(array, value):
     return all(element == value for element in array)
 
 
+def exclude(array, value):
+    """Returns a new array with every element that does not match
+    :attr:`value`.
+
+    Args:
+        array(list): List of values provided by the user.
+        value(int/float/str): A value that needs to be excluded.
+
+    Returns:
+        list: List excluding the give :attr:`value`.
+
+    Example:
+
+        >>> exclude([11, 22, 33], 22)
+        [11, 33]
+        >>> exclude([11, 22, 33], 44)
+        [11, 22, 33]
+        >>> exclude([11, 22, 33], [11, 22])
+        [33]
+
+    .. versionadded:: 0.2.0-dev
+    """
+    return subtract(array, value)
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will
