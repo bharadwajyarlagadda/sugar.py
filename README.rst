@@ -39,7 +39,7 @@ Install using pip:
     >>> sugar.construct(4, lambda x: x * 2)
     [0, 2, 4, 6]
 
-    >>> count([1, 2, 3, 3], 3)
+    >>> sugar.count([1, 2, 3, 3], 3)
     2
 
     >>> sugar.subtract([1, 2, 3], 2)
