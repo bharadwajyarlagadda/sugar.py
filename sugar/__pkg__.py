@@ -3,7 +3,7 @@
 """
 
 __package_name__ = 'sugar.py'
-__description__ = ''
+__description__ = 'Python utility library. Based on sugar Javascript Library.'
 __url__ = 'https://github.com/bharadwajyarlagadda/sugar.py'
 __version__ = '0.1.0'
 __author__ = 'Bharadwaj Yarlagadda'
