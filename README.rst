@@ -50,16 +50,16 @@ Install using pip:
     >>> sugar.count([1, 2, 3, 3], 3)
     2
 
-    >>> every([2, 2, 2], 2)
+    >>> sugar.every([2, 2, 2], 2)
     True
-    >>> every([2, 2, 3], 2)
+    >>> sugar.every([2, 2, 3], 2)
     False
 
-    >>> exclude([11, 22, 33], 22)
+    >>> sugar.exclude([11, 22, 33], 22)
     [11, 33]
-    >>> exclude([11, 22, 33], 44)
+    >>> sugar.exclude([11, 22, 33], 44)
     [11, 22, 33]
-    >>> exclude([11, 22, 33], [11, 22])
+    >>> sugar.exclude([11, 22, 33], [11, 22])
     [33]
 
     >>> sugar.subtract([1, 2, 3], 2)
