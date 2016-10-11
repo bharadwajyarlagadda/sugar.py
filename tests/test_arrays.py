@@ -5,7 +5,8 @@ from .fixtures import parametrize
 from sugar import (
     average,
     construct,
-    count
+    count,
+    subtract
 )
 
 
@@ -43,3 +44,13 @@ def test_construct(length, callback, expected_output):
 def test_count(array, value, expected_output):
     """Tests whether the count method is working properly or not."""
     assert count(array, value) == expected_output
+
+
+@parametrize('array,item,expected_output', [
+    ([1, 2, 3], 3, [1, 2]),
+    ([1, 2, 3], [1, 3], [2]),
+    ([1, 2, 3], [4], [1, 2, 3])
+])
+def test_subtract(array, item, expected_output):
+    """Tests whether the subtract method is working properly or not."""
+    assert subtract(array, item) == expected_output

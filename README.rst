@@ -4,6 +4,8 @@ sugar.py
 
 |travis| |coveralls|
 
+Python utility library. Based on sugar Javascript Library.
+
 Links
 =====
 

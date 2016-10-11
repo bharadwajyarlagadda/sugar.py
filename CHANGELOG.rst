@@ -6,3 +6,4 @@ Changelog
 - Add ``average()``.
 - Add ``construct()``.
 - Add ``count()``.
+- Add ``subtract()``.

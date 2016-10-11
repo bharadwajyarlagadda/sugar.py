@@ -63,3 +63,34 @@ def count(array, value):
     .. versionadded:: 0.1.0-dev
     """
     return array.count(value)
+
+
+def subtract(array, item):
+    """Subtracts :attr:`item` from the :attr:`array` and returns the result
+    as a new array. If :attr:`item` is also an array, all elements in it will
+    be removed.
+
+    Args:
+        array (list): A list of values provided by the user.
+        item (list/int/float/str): A value that needs to be removed from
+            :attr:`array`.
+
+    Returns:
+        list: A new list with the :attr:`item` removed.
+
+    Example:
+
+        >>> subtract([1, 2, 3], 2)
+        [1, 3]
+        >>> subtract ([1, 2, 3], [1, 3])
+        [2]
+        >>> subtract([1, 2, 3], 4)
+        [1, 2, 3]
+
+    .. versionadded:: 0.1.0-dev
+    """
+    if not isinstance(item, list):
+        # If item is not a list, convert it into list.
+        item = [item]
+
+    return [element for element in array if element not in item]
