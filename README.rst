@@ -49,6 +49,9 @@ Install using pip:
     >>> sugar.subtract([1, 2, 3], 4)
     [1, 2, 3]
 
+    >>> sugar.clone([1, 2, 3])
+    [1, 2, 3]
+
 
 .. |version| image:: https://img.shields.io/pypi/v/sugar.py.svg?style=flat-square
     :target: https://pypi.python.org/pypi/sugar.py/
