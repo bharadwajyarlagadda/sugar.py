@@ -17,5 +17,6 @@ from .arrays import (
     compact,
     construct,
     count,
+    every,
     subtract
 )

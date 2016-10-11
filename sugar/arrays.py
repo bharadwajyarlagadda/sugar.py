@@ -113,6 +113,31 @@ def count(array, value):
     return array.count(value)
 
 
+def every(array, value):
+    """Returns true if search is true for all elements of the array. In other
+    words, this method returns True if :attr:`array` contains all the same
+    values :attr:`value`.
+
+    Args:
+        array (list): List of values provided by the user.
+        value (int/float/str): Value that needs to be searched.
+
+    Returns:
+        bool: A boolean value based on the :attr:`array` having all the
+            values as :attr:`value`.
+
+    Example:
+
+        >>> every([2, 2, 2], 2)
+        True
+        >>> every([2, 2, 3], 2)
+        False
+
+    .. versionadded:: 0.2.0-dev
+    """
+    return all(element == value for element in array)
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

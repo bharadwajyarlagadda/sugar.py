@@ -2,8 +2,9 @@ Changelog
 =========
 
 
-- Add ``clone()`` method.
-- Add ``compact()`` method.
+- Add ``clone()``.
+- Add ``compact()``.
+- Add ``every()``.
 
 
 v0.1.1 (2016-10-10)

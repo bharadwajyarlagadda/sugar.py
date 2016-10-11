@@ -8,6 +8,7 @@ from sugar import (
     compact,
     construct,
     count,
+    every,
     subtract
 )
 
@@ -63,6 +64,15 @@ def test_construct(length, callback, expected_output):
 def test_count(array, value, expected_output):
     """Tests whether the count method is working properly or not."""
     assert count(array, value) == expected_output
+
+
+@parametrize('array,value,expected_output', [
+    ([2, 2, 2], 2, True),
+    ([2, 3, 4], 2, False)
+])
+def test_every(array, value, expected_output):
+    """Tests whether the every method is working properly or not."""
+    assert every(array, value) == expected_output
 
 
 @parametrize('array,item,expected_output', [
