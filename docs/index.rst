@@ -8,6 +8,7 @@ Guide
 .. toctree::
     :maxdepth: 3
 
+    installation
     api
 
 
@@ -18,6 +19,7 @@ Project Info
     :maxdepth: 1
 
     license
+    versioning
     changelog
     authors
     contributing
