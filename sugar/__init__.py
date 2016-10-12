@@ -19,5 +19,6 @@ from .arrays import (
     count,
     every,
     exclude,
+    filter,
     subtract
 )

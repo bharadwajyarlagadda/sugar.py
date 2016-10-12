@@ -62,6 +62,11 @@ Install using pip:
     >>> sugar.exclude([11, 22, 33], [11, 22])
     [33]
 
+    >>> sugar.filter([1, 2, 2, 4], value=2)
+    [2, 2]
+    >>> sugar.filter([1, 2, 2, 4], callback=lambda x: x > 1)
+    [2, 2, 4]
+
     >>> sugar.subtract([1, 2, 3], 2)
     [1, 3]
     >>> sugar.subtract ([1, 2, 3], [1, 3])

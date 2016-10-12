@@ -163,6 +163,35 @@ def exclude(array, value):
     return subtract(array, value)
 
 
+def filter(array, value=None, callback=None):
+    """Returns list of elements in the :attr:`array` that match :attr:`value`.
+    Also, returns list of elements based on the given callback method.
+
+    Args:
+        array (list): List of values provided by the user.
+        value (int/float/str): A value that needs to be matched with.
+        callback: A method that takes the value, filters the variable based
+            on the given condition and returns the filtered value.
+
+    Returns:
+        list: List of values that match with the :attr:`value` or the given
+            filter.
+
+    Example:
+
+        >>> filter([1, 2, 2, 4], value=2)
+        [2, 2]
+        >>> filter([1, 2, 2, 4], callback=lambda x: x > 1)
+        [2, 2, 4]
+
+    .. versionadded:: 0.2.0-dev
+    """
+    if value:
+        return [element for element in array if element == value]
+
+    return [element for element in array if callback(element) is True]
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

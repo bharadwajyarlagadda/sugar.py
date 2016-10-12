@@ -6,6 +6,7 @@ Changelog
 - Add ``compact()``.
 - Add ``every()``.
 - Add ``exclude()``.
+- Add ``filter()``.
 
 
 v0.1.1 (2016-10-10)

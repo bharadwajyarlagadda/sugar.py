@@ -10,6 +10,7 @@ from sugar import (
     count,
     every,
     exclude,
+    filter,
     subtract
 )
 
@@ -84,6 +85,15 @@ def test_every(array, value, expected_output):
 def test_exclude(array, item, expected_output):
     """Tests whether the exclude method is working properly or not."""
     assert exclude(array, item) == expected_output
+
+
+@parametrize('array,value,callback,expected_output', [
+    ([1, 2, 2, 4], 2, None, [2, 2]),
+    ([1, 2, 3, 3, 4], None, lambda x: x > 1, [2, 3, 3, 4])
+])
+def test_filter(array, value, callback, expected_output):
+    """Tests whether the filter method is working properly or not."""
+    assert filter(array, value, callback) == expected_output
 
 
 @parametrize('array,item,expected_output', [
