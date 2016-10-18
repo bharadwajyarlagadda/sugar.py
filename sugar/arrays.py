@@ -4,6 +4,8 @@ from __future__ import absolute_import
 
 import copy
 
+import sugar as _
+
 
 def average(array):
     """Returns the average for all the values in the given :attr:`array`.
@@ -24,11 +26,12 @@ def average(array):
     return sum(array) / len(array)
 
 
-def clone(array):
-    """Returns a shallow copy of the given list.
+def clone(obj):
+    """Returns a shallow copy of the given list. This method can also be used
+    for othe objects such as int/float/string.
 
     Args:
-        array (list): List of values provided by the user.
+        obj (list): List of values provided by the user.
 
     Returns:
         list: Shallow copy of the given array.
@@ -37,10 +40,14 @@ def clone(array):
 
         >>> clone([1, 2, 3])
         [1, 2, 3]
+        >>> clone('foobar')
+        'foobar'
+        >>> clone(1234)
+        1234
 
-    .. versionadded:: 0.2.0-dev
+    .. versionadded:: TODO
     """
-    return copy.copy(array)
+    return copy.copy(obj)
 
 
 def compact(array, all=False):
@@ -62,7 +69,7 @@ def compact(array, all=False):
         >>> compact([1, None, '', False, 2], all=True)
         [1, 2]
 
-    .. versionadded:: 0.2.0-dev
+    .. versionadded:: TODO
     """
     if all:
         return subtract(array, [None, False, ''])
@@ -113,6 +120,61 @@ def count(array, value):
     return array.count(value)
 
 
+def create(obj=None, copy=False):
+    """Creates an array from an unknown object.
+
+    Args:
+        obj (mixed): Value passed in by the user.
+        copy (bool): If clone is true, the array will be shallow cloned.
+
+    Returns:
+        list: Array from the given object.
+
+    Example:
+
+        >>> create('abc def 109;cd')
+        ['a', 'b', 'c', ' ', 'd', 'e', 'f', ' ', '1', '0', '9', ';', 'c', 'd']
+        >>> create(1234)
+        [1234]
+        >>> create([11, 22, 33, 44], copy=True)
+        [11, 22, 33, 44]
+        >>> create(True)
+        [True]
+        >>> create()
+        []
+
+    .. versionadded:: TODO
+    """
+    result = None
+
+    if not obj:
+        result = []
+
+    if _.is_array(obj):
+        if copy:
+            # Shallow copy of the object.
+            result = clone(obj)
+        else:
+            # Copies the object. This is the fast way to copy the object.
+            result = obj[:]
+
+    if _.is_boolean(obj) or _.is_number(obj):
+        if copy:
+            # Shallow copy of the object.
+            result = [clone(obj)]
+        else:
+            result = [obj]
+
+    if _.is_string(obj):
+        if copy:
+            # Shallow copy of the object.
+            result = [value for value in clone(obj)[:]]
+        else:
+            result = [value for value in obj[:]]
+
+    return result
+
+
 def every(array, value):
     """Returns true if search is true for all elements of the array. In other
     words, this method returns True if :attr:`array` contains all the same
@@ -133,7 +195,7 @@ def every(array, value):
         >>> every([2, 2, 3], 2)
         False
 
-    .. versionadded:: 0.2.0-dev
+    .. versionadded:: TODO
     """
     return all(element == value for element in array)
 
@@ -158,7 +220,7 @@ def exclude(array, value):
         >>> exclude([11, 22, 33], [11, 22])
         [33]
 
-    .. versionadded:: 0.2.0-dev
+    .. versionadded:: TODO
     """
     return subtract(array, value)
 
@@ -184,7 +246,7 @@ def filter(array, value=None, callback=None):
         >>> filter([1, 2, 2, 4], callback=lambda x: x > 1)
         [2, 2, 4]
 
-    .. versionadded:: 0.2.0-dev
+    .. versionadded:: TODO
     """
     if value:
         return [element for element in array if element == value]

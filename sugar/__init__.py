@@ -17,8 +17,16 @@ from .arrays import (
     compact,
     construct,
     count,
+    create,
     every,
     exclude,
     filter,
     subtract
+)
+
+from .predicates import (
+    is_array,
+    is_boolean,
+    is_number,
+    is_string
 )

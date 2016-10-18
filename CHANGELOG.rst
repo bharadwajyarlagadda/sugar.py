@@ -4,9 +4,14 @@ Changelog
 
 - Add ``clone()``.
 - Add ``compact()``.
+- Add ``create()``.
 - Add ``every()``.
 - Add ``exclude()``.
 - Add ``filter()``.
+- Add ``is_array()``.
+- Add ``is_boolean()``.
+- Add ``is_number()``.
+- Add ``is_string()``.
 
 
 v0.1.1 (2016-10-10)
