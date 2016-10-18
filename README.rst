@@ -31,47 +31,67 @@ Install using pip:
 
 .. code-block:: python
 
-    >>> import sugar
+    >>> import sugar as _
 
-    >>> float(sugar.average([1, 2, 3]))
+    >>> _.add([11, 22, 33], 88)
+    [11, 22, 33, 88]
+    >>> _.add([11, 22, 33], 88, 1)
+    [11, 88, 22, 33]
+    >>> _.add([11, 22, 33], [44, 55])
+    [11, 22, 33, 44, 55]
+    >>> _.add([11, 22, 33], [44, 55, 66, 77], 1)
+    [11, 44, 55, 66, 77, 22, 33]
+
+    >>> float(_.average([1, 2, 3]))
     2.0
 
-    >>> sugar.clone([1, 2, 3])
+    >>> _.clone([1, 2, 3])
     [1, 2, 3]
 
-    >>> sugar.compact([1, None, 2, False, 3])
+    >>> _.compact([1, None, 2, False, 3])
     [1, 2, False, 3]
-    >>> sugar.compact([1, None, '', False, 2], all=True)
+    >>> _.compact([1, None, '', False, 2], all=True)
     [1, 2]
 
-    >>> sugar.construct(4, lambda x: x * 2)
+    >>> _.construct(4, lambda x: x * 2)
     [0, 2, 4, 6]
 
-    >>> sugar.count([1, 2, 3, 3], 3)
+    >>> _.count([1, 2, 3, 3], 3)
     2
 
-    >>> sugar.every([2, 2, 2], 2)
+    >>> _.create('abc def 109;cd')
+    ['a', 'b', 'c', ' ', 'd', 'e', 'f', ' ', '1', '0', '9', ';', 'c', 'd']
+    >>> _.create(1234)
+    [1234]
+    >>> _.create([11, 22, 33, 44], copy=True)
+    [11, 22, 33, 44]
+    >>> _.create(True)
+    [True]
+    >>> _.create()
+    []
+
+    >>> _.every([2, 2, 2], 2)
     True
-    >>> sugar.every([2, 2, 3], 2)
+    >>> _.every([2, 2, 3], 2)
     False
 
-    >>> sugar.exclude([11, 22, 33], 22)
+    >>> _.exclude([11, 22, 33], 22)
     [11, 33]
-    >>> sugar.exclude([11, 22, 33], 44)
+    >>> _.exclude([11, 22, 33], 44)
     [11, 22, 33]
-    >>> sugar.exclude([11, 22, 33], [11, 22])
+    >>> _.exclude([11, 22, 33], [11, 22])
     [33]
 
-    >>> sugar.filter([1, 2, 2, 4], value=2)
+    >>> _.filter([1, 2, 2, 4], value=2)
     [2, 2]
-    >>> sugar.filter([1, 2, 2, 4], callback=lambda x: x > 1)
+    >>> _.filter([1, 2, 2, 4], callback=lambda x: x > 1)
     [2, 2, 4]
 
-    >>> sugar.subtract([1, 2, 3], 2)
+    >>> _.subtract([1, 2, 3], 2)
     [1, 3]
-    >>> sugar.subtract ([1, 2, 3], [1, 3])
+    >>> _.subtract ([1, 2, 3], [1, 3])
     [2]
-    >>> sugar.subtract([1, 2, 3], 4)
+    >>> _.subtract([1, 2, 3], 4)
     [1, 2, 3]
 
 
