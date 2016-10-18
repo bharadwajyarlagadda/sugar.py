@@ -36,6 +36,34 @@ def add(array, item, index=None):
     return array_append(array, item, index)
 
 
+def append(array, item, index=None):
+    """Appends item to the array. If item is also an array, it will be
+    concatenated instead of inserted.
+
+    Args:
+        array (list): List of values passed in by the user.
+        item (mixed): Value to be added to the array (passed in by the user).
+        index (int): Position at which the item will be added to the list.
+
+    Returns:
+        list: Appends item to the array and returns the result.
+
+    Example:
+
+        >>> append([11, 22, 33], 88)
+        [11, 22, 33, 88]
+        >>> append([11, 22, 33], 88, 1)
+        [11, 88, 22, 33]
+        >>> append([11, 22, 33], [44, 55])
+        [11, 22, 33, 44, 55]
+        >>> append([11, 22, 33], [44, 55, 66, 77], 1)
+        [11, 44, 55, 66, 77, 22, 33]
+
+    .. versionadded:: TODO
+    """
+    return array_append(array, item, index)
+
+
 def average(array):
     """Returns the average for all the values in the given :attr:`array`.
 
@@ -322,6 +350,9 @@ def array_append(array, item, index=None):
     """Adds item to the array and returns the result as a new array. If item
     is also an array, it will be concatenated instead of inserted. index will
     control where item is added."""
+    if not item:
+        return array
+
     if index:
         if _.is_array(item):
             array[index:index] = item

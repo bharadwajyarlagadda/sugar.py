@@ -13,6 +13,7 @@ from .__pkg__ import (
 
 from .arrays import (
     add,
+    append,
     average,
     clone,
     compact,

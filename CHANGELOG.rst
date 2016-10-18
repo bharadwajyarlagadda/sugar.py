@@ -3,6 +3,7 @@ Changelog
 
 
 - Add ``add()``.
+- Add ``append()``.
 - Add ``clone()``.
 - Add ``compact()``.
 - Add ``create()``.
