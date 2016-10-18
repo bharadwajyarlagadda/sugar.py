@@ -47,7 +47,6 @@ def test_append(array, item, index, expected):
     ([1, 2, 3], 2)
 ])
 def test_average(array, expected_average):
-    """Tests whether the average method is working properly or not."""
     assert _.average(array) == expected_average
 
 
@@ -55,7 +54,6 @@ def test_average(array, expected_average):
     ([1, 2, 3], [1, 2, 3])
 ])
 def test_clone(array, expected):
-    """Tests whether the clone method is working properly or not."""
     assert _.clone(array) == expected
 
 
@@ -64,7 +62,6 @@ def test_clone(array, expected):
     ([1, None, '', False, 2], True, [1, 2])
 ])
 def test_compact(array, all, expected):
-    """Tests whether the compact method is working properly or not."""
     assert _.compact(array, all) == expected
 
 
@@ -73,7 +70,6 @@ def test_compact(array, all, expected):
     (4, triple, [0, 3, 6, 9])
 ])
 def test_construct(length, callback, expected):
-    """Tests whether the construct method is working properly or not."""
     assert _.construct(length, callback) == expected
 
 
@@ -82,7 +78,6 @@ def test_construct(length, callback, expected):
     ([1, 2, 3, 3, 4], 5, 0)
 ])
 def test_count(array, value, expected):
-    """Tests whether the count method is working properly or not."""
     assert _.count(array, value) == expected
 
 
@@ -104,7 +99,6 @@ def test_create(obj, copy, expected):
     ([2, 3, 4], 2, False)
 ])
 def test_every(array, value, expected):
-    """Tests whether the every method is working properly or not."""
     assert _.every(array, value) == expected
 
 
@@ -114,7 +108,6 @@ def test_every(array, value, expected):
     ([1, 2, 3], 4, [1, 2, 3])
 ])
 def test_exclude(array, item, expected):
-    """Tests whether the exclude method is working properly or not."""
     assert _.exclude(array, item) == expected
 
 
@@ -123,8 +116,17 @@ def test_exclude(array, item, expected):
     ([1, 2, 3, 3, 4], None, lambda x: x > 1, [2, 3, 3, 4])
 ])
 def test_filter(array, value, callback, expected):
-    """Tests whether the filter method is working properly or not."""
     assert _.filter(array, value, callback) == expected
+
+
+@parametrize('array,num,expected', [
+    ([11, 22, 33, 44], 1, [11]),
+    ([11, 22, 33, 44], None, []),
+    ([11, 22, 33, 44], -3, []),
+    ([11, 22, 33, 44], 9, [11, 22, 33, 44])
+])
+def test_first(array, num, expected):
+    assert _.first(array, num) == expected
 
 
 @parametrize('array,item,expected', [
@@ -133,5 +135,4 @@ def test_filter(array, value, callback, expected):
     ([1, 2, 3], [4], [1, 2, 3])
 ])
 def test_subtract(array, item, expected):
-    """Tests whether the subtract method is working properly or not."""
     assert _.subtract(array, item) == expected

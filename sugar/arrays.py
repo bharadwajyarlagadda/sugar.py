@@ -311,6 +311,35 @@ def filter(array, value=None, callback=None):
     return [element for element in array if callback(element) is True]
 
 
+def first(array, num=1):
+    """Returns the first element(s) in the array. When num is passed, returns
+    the first num elements in the array.
+
+    Args:
+        array (list): List of values passed in by the user.
+        num (int): Number passed in by the user.
+
+    Returns:
+        list: Returns an array of first :attr:`num` elements.
+
+    Example:
+
+        >>> first([11, 22, 33, 44], 1)
+        [11]
+        >>> first([11, 22, 33, 44], None)
+        []
+        >>> first([11, 22, 33, 44], -3)
+        []
+        >>> first([11, 22, 33, 44], 9)
+        [11, 22, 33, 44]
+
+    .. versionadded:: TODO
+    """
+    num = 0 if (not num or num < 0) else num
+
+    return array[0:num]
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

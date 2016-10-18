@@ -10,6 +10,7 @@ Changelog
 - Add ``every()``.
 - Add ``exclude()``.
 - Add ``filter()``.
+- Add ``first()``.
 - Add ``is_array()``.
 - Add ``is_boolean()``.
 - Add ``is_number()``.

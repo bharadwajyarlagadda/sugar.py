@@ -23,6 +23,7 @@ from .arrays import (
     every,
     exclude,
     filter,
+    first,
     subtract
 )
 
