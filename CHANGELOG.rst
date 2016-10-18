@@ -2,6 +2,7 @@ Changelog
 =========
 
 
+- Add ``add()``.
 - Add ``clone()``.
 - Add ``compact()``.
 - Add ``create()``.

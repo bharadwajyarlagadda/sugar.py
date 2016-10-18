@@ -7,6 +7,47 @@ import copy
 import sugar as _
 
 
+def add(array, item, index=None):
+    """Adds item to the array and returns the result as a new array. If item
+    is also an array, it will be concatenated instead of inserted. index will
+    control where item is added.
+
+    Args:
+        array (list): List of values passed in by the user.
+        item (mixed): Value to be added to the array (passed in by the user).
+        index (int): Position at which the item will be added to the list.
+
+    Returns:
+        list: Adds item to the array and returns the result as a new array.
+
+    Example:
+
+        >>> add([11, 22, 33], 88)
+        [11, 22, 33, 88]
+        >>> add([11, 22, 33], 88, 1)
+        [11, 88, 22, 33]
+        >>> add([11, 22, 33], [44, 55])
+        [11, 22, 33, 44, 55]
+        >>> add([11, 22, 33], [44, 55, 66, 77], 1)
+        [11, 44, 55, 66, 77, 22, 33]
+
+    .. versionadded:: TODO
+    """
+    if index:
+        if _.is_array(item):
+            array[index:index] = item
+        elif not _.is_array(item):
+            array.insert(index, item)
+
+    if not index:
+        if _.is_array(item):
+            array += item
+        elif not _.is_array(item):
+            array.append(item)
+
+    return array
+
+
 def average(array):
     """Returns the average for all the values in the given :attr:`array`.
 

@@ -15,6 +15,19 @@ def triple(variable):
     return variable * 3
 
 
+@parametrize('array,item,index,expected', [
+    ([11, 22, 33], 44, None, [11, 22, 33, 44]),
+    ([11, 22, 33], 44, 1, [11, 44, 22, 33]),
+    ([11, 22, 33], [44, 55], None, [11, 22, 33, 44, 55]),
+    ([11, 22, 33], [44, 55], 1, [11, 44, 55, 22, 33]),
+    ([11, 22, 33], {'a': 1}, 1, [11, {'a': 1}, 22, 33]),
+    ([11, 22, 33], [{'a': 1}, {'b': 2}], 1, [11, {'a': 1}, {'b': 2}, 22, 33]),
+    ([11, 22, 33], 'abcd', None, [11, 22, 33, 'abcd'])
+])
+def test_add(array, item, index, expected):
+    assert _.add(array, item, index) == expected
+
+
 @parametrize('array,expected_average', [
     ([1, 2, 3], 2)
 ])
