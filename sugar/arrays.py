@@ -33,19 +33,7 @@ def add(array, item, index=None):
 
     .. versionadded:: TODO
     """
-    if index:
-        if _.is_array(item):
-            array[index:index] = item
-        elif not _.is_array(item):
-            array.insert(index, item)
-
-    if not index:
-        if _.is_array(item):
-            array += item
-        elif not _.is_array(item):
-            array.append(item)
-
-    return array
+    return array_append(array, item, index)
 
 
 def average(array):
@@ -324,3 +312,26 @@ def subtract(array, item):
         item = [item]
 
     return [element for element in array if element not in item]
+
+#
+# Utility methods not a part of the main API
+#
+
+
+def array_append(array, item, index=None):
+    """Adds item to the array and returns the result as a new array. If item
+    is also an array, it will be concatenated instead of inserted. index will
+    control where item is added."""
+    if index:
+        if _.is_array(item):
+            array[index:index] = item
+        elif not _.is_array(item):
+            array.insert(index, item)
+
+    if not index:
+        if _.is_array(item):
+            array += item
+        elif not _.is_array(item):
+            array.append(item)
+
+    return array
