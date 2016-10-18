@@ -347,9 +347,6 @@ def subtract(array, item):
 
 
 def array_append(array, item, index=None):
-    """Adds item to the array and returns the result as a new array. If item
-    is also an array, it will be concatenated instead of inserted. index will
-    control where item is added."""
     if not item:
         return array
 
