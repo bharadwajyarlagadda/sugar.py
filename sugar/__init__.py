@@ -24,6 +24,7 @@ from .arrays import (
     exclude,
     filter,
     first,
+    includes,
     subtract
 )
 

@@ -129,6 +129,18 @@ def test_first(array, num, expected):
     assert _.first(array, num) == expected
 
 
+@parametrize('array,search,fromindex,expected', [
+    ([11, 22, 33], 22, 1, True),
+    ([11, 22, 33], 22, 2, False),
+    ([11, 22, 33], 33, None, True),
+    ([11, 22, 33], 22, 0, True),
+    ([11, 22, 33], 55, None, False),
+    ([11, 22, 33], 33, -1, True)
+])
+def test_includes(array, search, fromindex, expected):
+    assert _.includes(array, search, fromindex) == expected
+
+
 @parametrize('array,item,expected', [
     ([1, 2, 3], 3, [1, 2]),
     ([1, 2, 3], [1, 3], [2]),

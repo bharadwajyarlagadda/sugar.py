@@ -340,6 +340,42 @@ def first(array, num=1):
     return array[0:num]
 
 
+def includes(array, search, fromindex=0):
+    """Returns true if search is contained within the array. Search begins at
+    fromindex, which defaults to the beginning of the array.
+
+    Args:
+        array (list): A list of values provided by the user.
+        search (mixed): A value that needs to be searched (provided by the
+            user).
+        fromindex (int): Search begins at fromindex.
+
+    Returns:
+        bool: True if search is contained within the array beginning at
+            fromindex position else False.
+
+    Example:
+
+        >>> includes([11, 22, 33], 22, 0)
+        True
+        >>> includes([11, 22, 33], 22, 1)
+        True
+        >>> includes([11, 22, 33], 22, 2)
+        False
+        >>> includes([11, 22, 33], 11, None)
+        True
+        >>> includes([11, 22, 33], 33)
+        True
+        >>> includes([11, 22, 33], 22, -1)
+        False
+        >>> includes([11, 22, 33], 22, -2)
+        True
+
+    .. versionadded:: TODO
+    """
+    return search in array[fromindex:]
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

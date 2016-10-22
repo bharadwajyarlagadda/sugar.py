@@ -105,6 +105,21 @@ Install using pip:
     >>> _.first([11, 22, 33, 44], 9)
     [11, 22, 33, 44]
 
+    >>> _.includes([11, 22, 33], 22, 0)
+    True
+    >>> _.includes([11, 22, 33], 22, 1)
+    True
+    >>> _.includes([11, 22, 33], 22, 2)
+    False
+    >>> _.includes([11, 22, 33], 11, None)
+    True
+    >>> _.includes([11, 22, 33], 33)
+    True
+    >>> _.includes([11, 22, 33], 22, -1)
+    False
+    >>> _.includes([11, 22, 33], 22, -2)
+    True
+
     >>> _.subtract([1, 2, 3], 2)
     [1, 3]
     >>> _.subtract ([1, 2, 3], [1, 3])
