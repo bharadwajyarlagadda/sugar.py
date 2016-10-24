@@ -129,6 +129,15 @@ def test_first(array, num, expected):
     assert _.first(array, num) == expected
 
 
+@parametrize('array,index,expected', [
+    ([11, 22, 33], 1, [22, 33]),
+    ([11, 22, 33], 2, [33]),
+    ([11, 22, 33], None, [11, 22, 33])
+])
+def test_from(array, index, expected):
+    assert _.from_(array, index) == expected
+
+
 @parametrize('array,search,fromindex,expected', [
     ([11, 22, 33], 22, 1, True),
     ([11, 22, 33], 22, 2, False),

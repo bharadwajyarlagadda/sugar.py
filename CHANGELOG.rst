@@ -11,6 +11,7 @@ Changelog
 - Add ``exclude()``.
 - Add ``filter()``.
 - Add ``first()``.
+- Add ``from_()``.
 - Add ``includes()``.
 - Add ``is_array()``.
 - Add ``is_boolean()``.

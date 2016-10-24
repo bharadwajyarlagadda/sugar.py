@@ -340,6 +340,32 @@ def first(array, num=1):
     return array[0:num]
 
 
+def from_(array, index=0):
+    """Returns a slice of the array from :attr:`index`.
+
+    Args:
+        array (list): A list of values provided by the user.
+        index (int): Start position of the array where the slice starts.
+
+    Returns:
+        list: Array sliced from :attr:`index`).
+
+    Example:
+
+        >>> from_([11, 22, 33], 1)
+        [22, 33]
+        >>> from_([11, 22, 33])
+        [11, 22, 33]
+        >>> from_([11, 22, 33], 2)
+        [33]
+        >>> from_([11, 22, 33], None)
+        [11, 22, 33]
+
+    .. versionadded:: TODO
+    """
+    return array[index:]
+
+
 def includes(array, search, fromindex=0):
     """Returns true if search is contained within the array. Search begins at
     fromindex, which defaults to the beginning of the array.
