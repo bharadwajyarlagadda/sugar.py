@@ -16,6 +16,7 @@ Changelog
 - Add ``is_array()``.
 - Add ``is_boolean()``.
 - Add ``is_empty()``.
+- Add ``is_equal()``.
 - Add ``is_number()``.
 - Add ``is_string()``.
 

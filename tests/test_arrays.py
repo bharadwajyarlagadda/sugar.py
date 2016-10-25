@@ -159,6 +159,17 @@ def test_is_empty(array, expected):
     assert _.is_empty(array) == expected
 
 
+@parametrize('array_one,array_two,expected', [
+    ([1, 2], [1, 2], True),
+    ([1, 2], [2, 1], False),
+    ([], [], True),
+    ([None], [], False),
+    (['1'], [str(1)], True)
+])
+def test_is_equal(array_one, array_two, expected):
+    assert _.is_equal(array_one, array_two) == expected
+
+
 @parametrize('array,item,expected', [
     ([1, 2, 3], 3, [1, 2]),
     ([1, 2, 3], [1, 3], [2]),

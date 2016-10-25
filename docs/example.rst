@@ -111,6 +111,17 @@ Arrays
     >>> _.is_empty([None])
     False
 
+    >>> is_equal([1, 2], [1, 2])
+    True
+    >>> is_equal(['1'], [str(1)])
+    True
+    >>> is_equal([None], [])
+    False
+    >>> is_equal([1, 2], [2, 1])
+    False
+    >>> is_equal([], [])
+    True
+
     >>> _.subtract([1, 2, 3], 2)
     [1, 3]
     >>> _.subtract ([1, 2, 3], [1, 3])

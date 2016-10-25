@@ -423,6 +423,34 @@ def is_empty(array):
     return True if not array else False
 
 
+def is_equal(array_one, array_two):
+    """Returns True if :attr:`array_one` is equal to :attr:`array_two`.
+
+    Args:
+        array_one (list): First list of values provided by the user.
+        array_two (list): Second list of values provided by the user.
+
+    Returns:
+        bool: True if both the arrays are equal else False.
+
+    Example:
+
+        >>> is_equal([1, 2], [1, 2])
+        True
+        >>> is_equal(['1'], [str(1)])
+        True
+        >>> is_equal([None], [])
+        False
+        >>> is_equal([1, 2], [2, 1])
+        False
+        >>> is_equal([], [])
+        True
+
+    .. versionadded:: TODO
+    """
+    return array_one == array_two
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will
