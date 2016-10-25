@@ -129,6 +129,11 @@ Install using pip:
     >>> _.includes([11, 22, 33], 22, -2)
     True
 
+    >>> _.is_empty([])
+    True
+    >>> _.is_empty([None])
+    False
+
     >>> _.subtract([1, 2, 3], 2)
     [1, 3]
     >>> _.subtract ([1, 2, 3], [1, 3])

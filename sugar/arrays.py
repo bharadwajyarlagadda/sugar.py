@@ -402,6 +402,27 @@ def includes(array, search, fromindex=0):
     return search in array[fromindex:]
 
 
+def is_empty(array):
+    """Returns True if the :attr:`array` has a length of zero.
+
+    Args:
+        array (list): A list of values provided by the user.
+
+    Returns:
+        bool: True if the list is empty else False.
+
+    Example:
+
+        >>> is_empty([])
+        True
+        >>> is_empty([None])
+        False
+
+    .. versionadded:: TODO
+    """
+    return True if not array else False
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

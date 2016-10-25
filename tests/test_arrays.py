@@ -150,6 +150,15 @@ def test_includes(array, search, fromindex, expected):
     assert _.includes(array, search, fromindex) == expected
 
 
+@parametrize('array,expected', [
+    ([], True),
+    ([None], False),
+    ([1, 2], False)
+])
+def test_is_empty(array, expected):
+    assert _.is_empty(array) == expected
+
+
 @parametrize('array,item,expected', [
     ([1, 2, 3], 3, [1, 2]),
     ([1, 2, 3], [1, 3], [2]),

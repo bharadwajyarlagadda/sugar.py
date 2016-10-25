@@ -26,6 +26,7 @@ from .arrays import (
     first,
     from_,
     includes,
+    is_empty,
     subtract
 )
 
