@@ -11,6 +11,7 @@ Guide
     installation
     differences
     api
+    example
 
 
 Project Info
