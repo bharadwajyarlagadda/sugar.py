@@ -19,6 +19,7 @@ Changelog
 - Add ``is_equal()``.
 - Add ``is_number()``.
 - Add ``is_string()``.
+- Add ``last()``.
 
 
 v0.1.1 (2016-10-10)

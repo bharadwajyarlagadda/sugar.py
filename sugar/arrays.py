@@ -451,6 +451,40 @@ def is_equal(array_one, array_two):
     return array_one == array_two
 
 
+def last(array, num=1):
+    """Returns the last element(s) in the array. When :attr:`num` is passed,
+    returns the last :attr:`num` elements in the array.
+
+    Args:
+        array (list): List of values passed in by the user.
+        num (int): Number passed in by the user.
+
+    Returns:
+        list: Returns an array of last :attr:`num` elements.
+
+    Example:
+
+        >>> last([11, 22, 33, 44], 1)
+        [44]
+        >>> last([11, 22, 33, 44], 3)
+        [22, 33, 44]
+        >>> last([11, 22, 33, 44], None)
+        []
+        >>> last([11, 22, 33, 44], -3)
+        []
+        >>> last([11, 22, 33, 44], 9)
+        []
+
+    .. versionadded:: TODO
+    """
+    num = 0 if (not num or num < 0) else num
+
+    if len(array) < num:
+        num = 0
+
+    return array[(len(array) - num):]
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

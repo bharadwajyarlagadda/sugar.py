@@ -28,6 +28,7 @@ from .arrays import (
     includes,
     is_empty,
     is_equal,
+    last,
     subtract
 )
 

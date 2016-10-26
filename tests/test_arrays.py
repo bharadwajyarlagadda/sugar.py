@@ -170,6 +170,17 @@ def test_is_equal(array_one, array_two, expected):
     assert _.is_equal(array_one, array_two) == expected
 
 
+@parametrize('array,num,expected', [
+    ([11, 22, 33, 44], 1, [44]),
+    ([11, 22, 33, 44], None, []),
+    ([11, 22, 33, 44], -3, []),
+    ([11, 22, 33, 44], 9, []),
+    ([11, 22, 33, 44], 3, [22, 33, 44])
+])
+def test_last(array, num, expected):
+    assert _.last(array, num) == expected
+
+
 @parametrize('array,item,expected', [
     ([1, 2, 3], 3, [1, 2]),
     ([1, 2, 3], [1, 3], [2]),
