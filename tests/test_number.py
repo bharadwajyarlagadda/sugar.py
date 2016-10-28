@@ -5,6 +5,15 @@ from .fixtures import parametrize
 import sugar as _
 
 
+@parametrize('value,num,expected', [
+    (4, 2, True),
+    (1.5, 0.5, True),
+    (5, 2, False)
+])
+def test_is_multiple_of(value, num, expected):
+    assert _.is_multiple_of(value, num) == expected
+
+
 @parametrize('args', [
     (0, 5),
     (2, 5),

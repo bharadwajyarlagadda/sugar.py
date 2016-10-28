@@ -7,6 +7,32 @@ import random
 import math
 
 
+def is_multiple_of(value, num):
+    """Returns true if the :attr:`value` is a multiple of :attr:`num`.
+
+    Args:
+        value (int/float): Value provided by the user.
+        num (int/float): Value provided by the user.
+
+    Returns:
+        bool: True if the :attr:`value` is a multiple of :attr:`num`.
+
+    Example:
+
+        >>> is_multiple_of(6, 2)
+        True
+        >>> is_multiple_of(5, 2)
+        False
+        >>> is_multiple_of(1.5, 3)
+        False
+        >>> is_multiple_of(1.5, 0.5)
+        True
+
+    .. versionadded:: TODO
+    """
+    return value % num == 0
+
+
 def random_(n1=None, n2=None):
     """Returns a random integer/float from :attr:`n1` to :attr:`n2` (both
     inclusive)

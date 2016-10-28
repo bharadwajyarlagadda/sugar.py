@@ -33,6 +33,7 @@ from .arrays import (
 )
 
 from .number import (
+    is_multiple_of,
     random_
 )
 

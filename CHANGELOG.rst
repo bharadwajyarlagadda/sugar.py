@@ -18,6 +18,7 @@ Changelog
 - Add ``is_empty()``.
 - Add ``is_equal()``.
 - Add ``is_none()``.
+- Add ``is_multiple_of()``.
 - Add ``is_number()``.
 - Add ``is_string()``.
 - Add ``last()``.

@@ -147,6 +147,15 @@ Numbers
 
     >>> import sugar as _
 
+    >>> _.is_multiple_of(6, 2)
+    True
+    >>> _.is_multiple_of(5, 2)
+    False
+    >>> _.is_multiple_of(1.5, 3)
+    False
+    >>> _.is_multiple_of(1.5, 0.5)
+    True
+
     >>> result = _.random_(5, 6)
     >>> assert 5 <= result <= 6
     >>> result = _.random_(5)
