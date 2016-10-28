@@ -51,6 +51,27 @@ def is_boolean(obj):
     return isinstance(obj, bool)
 
 
+def is_none(value):
+    """Returns True if the :attr:`value` is None.
+
+    Args:
+        value (mixed): Value passed in by the user.
+
+    Returns:
+        bool: True if the given value is None else False
+
+    Example:
+
+        >>> is_none(None)
+        True
+        >>> is_none([])
+        False
+
+    .. versionadded:: TODO
+    """
+    return value is None
+
+
 def is_number(value):
     """Validates whether the given value is an integer/float.
 

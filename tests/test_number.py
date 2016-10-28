@@ -3,7 +3,6 @@
 from .fixtures import parametrize
 
 import sugar as _
-import time
 
 
 @parametrize('args', [

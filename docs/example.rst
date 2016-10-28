@@ -152,4 +152,17 @@ Numbers
     >>> result = random_(5)
     >>> assert 0 <= result <= 5
 
+
+Predicates
+----------
+
+.. code-block:: python
+
+    >>> import sugar as _
+
+    >>> is_none(None)
+    True
+    >>> is_none([])
+    False
+
     

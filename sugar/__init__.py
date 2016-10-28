@@ -39,6 +39,7 @@ from .number import (
 from .predicates import (
     is_array,
     is_boolean,
+    is_none,
     is_number,
     is_string
 )
