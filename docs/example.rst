@@ -147,9 +147,9 @@ Numbers
 
     >>> import sugar as _
 
-    >>> result = random_(5, 6)
+    >>> result = _.random_(5, 6)
     >>> assert 5 <= result <= 6
-    >>> result = random_(5)
+    >>> result = _.random_(5)
     >>> assert 0 <= result <= 5
 
 
@@ -160,9 +160,8 @@ Predicates
 
     >>> import sugar as _
 
-    >>> is_none(None)
+    >>> _.is_none(None)
     True
-    >>> is_none([])
+    >>> _.is_none([])
     False
 
-    
