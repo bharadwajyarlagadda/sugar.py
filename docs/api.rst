@@ -8,6 +8,12 @@ Arrays
 .. automodule:: sugar.arrays
     :members:
 
+Numbers
+-------
+
+.. automodule:: sugar.number
+    :members:
+
 Predicates
 ----------
 
