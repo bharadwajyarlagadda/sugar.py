@@ -516,7 +516,7 @@ def subtract(array, item):
     return [element for element in array if element not in item]
 
 #
-# Utility methods not a part of the main API
+# Helper methods not a part of the main API
 #
 
 

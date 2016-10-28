@@ -140,3 +140,16 @@ Arrays
     >>> _.subtract([1, 2, 3], 4)
     [1, 2, 3]
 
+Numbers
+-------
+
+.. code-block:: python
+
+    >>> import sugar as _
+
+    >>> result = random_(5, 6)
+    >>> assert 5 <= result <= 6
+    >>> result = random_(5)
+    >>> assert 0 <= result <= 5
+
+    

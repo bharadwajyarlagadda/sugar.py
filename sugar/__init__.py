@@ -32,6 +32,10 @@ from .arrays import (
     subtract
 )
 
+from .number import (
+    random_
+)
+
 from .predicates import (
     is_array,
     is_boolean,
