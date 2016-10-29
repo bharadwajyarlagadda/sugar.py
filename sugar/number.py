@@ -100,7 +100,7 @@ def is_prime(num):
     """
     count = 0
 
-    for i in _range(1, (math.ceil(math.sqrt(num)) + 1)):
+    for i in _range(1, (int(math.ceil(math.sqrt(num))) + 1)):
         if num % i == 0:
             count += 1
 
