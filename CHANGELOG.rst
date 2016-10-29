@@ -26,6 +26,7 @@ Changelog
 - Add ``is_odd``.
 - Add ``is_prime``.
 - Add ``is_string``.
+- Add ``primes_between``.
 - Add ``last``.
 - Add ``random_``.
 

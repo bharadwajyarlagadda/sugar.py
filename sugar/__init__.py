@@ -39,6 +39,7 @@ from .number import (
     is_multiple_of,
     is_odd,
     is_prime,
+    primes_between,
     random_
 )
 

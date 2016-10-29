@@ -57,6 +57,14 @@ def test_is_prime(num, expected):
     assert _.is_prime(num) == expected
 
 
+@parametrize('case,expected', [
+    ((1, 20), [1, 2, 3, 5, 7, 11, 13, 17, 19]),
+    ((21, 40), [23, 29, 31, 37])
+])
+def test_primes_between(case, expected):
+    assert _.primes_between(*case) == expected
+
+
 @parametrize('args', [
     (0, 5),
     (2, 5),

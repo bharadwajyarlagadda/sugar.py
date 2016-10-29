@@ -26,7 +26,7 @@ From v0.1.0
     - :func:`sugar.arrays.last`.
 
 
-- 7 number methods
+- 8 number methods
 
     - :func:`sugar.number.armstrongs_between`.
     - :func:`sugar.number.is_armstrong`.
@@ -34,6 +34,7 @@ From v0.1.0
     - :func:`sugar.number.is_multiple_of`.
     - :func:`sugar.number.is_odd`.
     - :func:`sugar.number.is_prime`.
+    - :func:`sugar.number.primes_between`.
     - :func:`sugar.number.random_`
 
 
@@ -54,6 +55,7 @@ The below methods are new apart from Sugar JS utility library:
     - :func:`sugar.number.armstrongs_between`.
     - :func:`sugar.number.is_armstrong`.
     - :func:`sugar.number.is_prime`.
+    - :func:`sugar.number.primes_between`.
 
 
 v0.1.0

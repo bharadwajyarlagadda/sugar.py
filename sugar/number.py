@@ -170,6 +170,9 @@ def is_prime(num):
     """
     count = 0
 
+    if num in [1, 2]:
+        return True
+
     for i in _range(1, (int(math.ceil(math.sqrt(num))) + 1)):
         if num % i == 0:
             count += 1
@@ -180,6 +183,34 @@ def is_prime(num):
         result = False
 
     return result
+
+
+def primes_between(n1=None, n2=None):
+    """Get all the prime numbers between :attr:`n1` and :attr:`n2`.
+
+    Args:
+        n1 (int): Number passed in by the user.
+        n2 (int): Number passed in by the user.
+
+    Returns:
+        list: List of all the prime numbers between :attr:`n1`, and :attr:`n2`.
+
+    Example:
+
+        >>> primes_between(1, 20)
+        [1, 2, 3, 5, 7, 11, 13, 17, 19]
+        >>> primes_between(21, 40)
+        [23, 29, 31, 37]
+
+    .. versionadded:: TODO
+    """
+    n1 = 0 if not n1 else n1
+    n2 = 0 if not n2 else n2
+
+    max_value = max(n1, n2)
+    min_value = min(n1, n2)
+
+    return [num for num in _range(min_value, max_value + 1) if is_prime(num)]
 
 
 def random_(n1=None, n2=None):

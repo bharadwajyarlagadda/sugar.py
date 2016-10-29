@@ -185,6 +185,11 @@ Numbers
     >>> _.is_prime(727021)
     True
 
+    >>> _.primes_between(1, 20)
+    [1, 2, 3, 5, 7, 11, 13, 17, 19]
+    >>> _.primes_between(21, 40)
+    [23, 29, 31, 37]
+
     >>> result = _.random_(5, 6)
     >>> assert 5 <= result <= 6
     >>> result = _.random_(5)
