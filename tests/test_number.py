@@ -6,6 +6,15 @@ import sugar as _
 
 
 @parametrize('num,expected', [
+    (371, True),
+    (8208, True),
+    (51, False)
+])
+def test_is_armstrong(num, expected):
+    assert _.is_armstrong(num) == expected
+
+
+@parametrize('num,expected', [
     (6, True),
     (7, False)
 ])

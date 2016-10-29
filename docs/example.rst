@@ -147,6 +147,13 @@ Numbers
 
     >>> import sugar as _
 
+    >>> _.is_armstrong(371)
+    True
+    >>> _.is_armstrong(8208)
+    True
+    >>> _.is_armstrong(51)
+    False
+
     >>> _.is_even(6)
     True
     >>> _.is_even(7)

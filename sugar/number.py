@@ -8,6 +8,43 @@ import math
 from ._compat import _range
 
 
+def is_armstrong(num):
+    """Retursn True if :attr:`num` is armstrong number.
+
+    Args:
+        num (int): Number passed in by the user.
+
+    Returns:
+        bool: True if the given :attr:`num` is armstrong number else False.
+
+    Example:
+
+        >>> is_armstrong(371)
+        True
+        >>> is_armstrong(8208)
+        True
+        >>> is_armstrong(51)
+        False
+
+    .. versionadded:: TODO
+    """
+    total = 0
+    temp = num
+    digits = len(str(num))
+
+    while temp != 0:
+        remainder = temp % 10
+        total += math.pow(remainder, digits)
+        temp //= 10
+
+    if total == num:
+        result = True
+    else:
+        result = False
+
+    return result
+
+
 def is_even(num):
     """Returns True if :attr:`num` is even.
 

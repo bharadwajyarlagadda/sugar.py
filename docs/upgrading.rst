@@ -4,6 +4,10 @@
 Upgrading
 *********
 
+
+From v0.1.0
+===========
+
 - 14 array methods
 
     - :func:`sugar.arrays.add`.
@@ -22,8 +26,9 @@ Upgrading
     - :func:`sugar.arrays.last`.
 
 
-- 5 number methods
+- 6 number methods
 
+    - :func:`sugar.number.is_armstrong`.
     - :func:`sugar.number.is_even`.
     - :func:`sugar.number.is_multiple_of`.
     - :func:`sugar.number.is_odd`.
@@ -45,6 +50,7 @@ Improvements
 
 The below methods are new apart from Sugar JS utility library:
 
+    - :func:`sugar.number.is_armstrong`.
     - :func:`sugar.number.is_prime`.
 
 

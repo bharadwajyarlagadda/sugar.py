@@ -13,6 +13,7 @@ Changelog
 - Add ``first``.
 - Add ``from_``.
 - Add ``includes``.
+- Add ``is_armstrong``.
 - Add ``is_array``.
 - Add ``is_boolean``.
 - Add ``is_empty``.
