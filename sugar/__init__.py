@@ -36,6 +36,7 @@ from .number import (
     is_even,
     is_multiple_of,
     is_odd,
+    is_prime,
     random_
 )
 

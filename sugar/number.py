@@ -2,9 +2,10 @@
 
 from __future__ import absolute_import
 
-import sys
 import random
 import math
+
+from ._compat import _range
 
 
 def is_even(num):
@@ -73,6 +74,42 @@ def is_odd(num):
     .. versionadded:: TODO
     """
     return num % 2 != 0
+
+
+def is_prime(num):
+    """Returns True if the give :attr:`num` is a prime number.
+
+    Args:
+        num (int/float): Number passed in by the user.
+
+    Returns:
+        bool: True if the given :attr:`num` is a prime number else False
+
+    Example:
+
+        >>> is_prime(5)
+        True
+        >>> is_prime(7)
+        True
+        >>> is_prime(4)
+        False
+        >>> is_prime(727021)
+        True
+
+    .. versionadded:: TODO
+    """
+    count = 0
+
+    for i in _range(1, (math.ceil(math.sqrt(num)) + 1)):
+        if num % i == 0:
+            count += 1
+
+    if count <= 1:
+        result = True
+    else:
+        result = False
+
+    return result
 
 
 def random_(n1=None, n2=None):

@@ -166,6 +166,15 @@ Numbers
     >>> _.is_odd(7)
     True
 
+    >>> _.is_prime(5)
+    True
+    >>> _.is_prime(7)
+    True
+    >>> _.is_prime(4)
+    False
+    >>> _.is_prime(727021)
+    True
+
     >>> result = _.random_(5, 6)
     >>> assert 5 <= result <= 6
     >>> result = _.random_(5)

@@ -30,6 +30,17 @@ def test_is_odd(num, expected):
     assert _.is_odd(num) == expected
 
 
+@parametrize('num,expected', [
+    (13, True),
+    (727021, True),
+    (10, False),
+    (21, False),
+    (37, True)
+])
+def test_is_prime(num, expected):
+    assert _.is_prime(num) == expected
+
+
 @parametrize('args', [
     (0, 5),
     (2, 5),

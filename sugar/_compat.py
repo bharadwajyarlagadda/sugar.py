@@ -20,6 +20,8 @@ PY26 = sys.version_info[0:2] == (2, 6)
 if PY3:
     string_types = (str,)
     number_types = (int, float, Decimal)
+    _range = range
 else:
     string_types = (str, unicode)
     number_types = (int, long, float, Decimal)
+    _range = xrange

@@ -4,6 +4,8 @@ from __future__ import absolute_import
 
 import copy
 
+from ._compat import _range
+
 import sugar as _
 
 
@@ -153,7 +155,7 @@ def construct(var, callback):
 
     .. versionadded:: 0.1.0
     """
-    return [callback(i) for i in range(0, var)]
+    return [callback(i) for i in _range(0, var)]
 
 
 def count(array, value):
