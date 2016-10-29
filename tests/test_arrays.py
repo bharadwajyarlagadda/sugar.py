@@ -116,7 +116,7 @@ def test_exclude(array, item, expected):
     ([1, 2, 3, 3, 4], None, lambda x: x > 1, [2, 3, 3, 4])
 ])
 def test_filter(array, value, callback, expected):
-    assert _.filter(array, value, callback) == expected
+    assert _.filter_(array, value, callback) == expected
 
 
 @parametrize('array,num,expected', [

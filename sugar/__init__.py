@@ -22,7 +22,7 @@ from .arrays import (
     create,
     every,
     exclude,
-    filter,
+    filter_,
     first,
     from_,
     includes,

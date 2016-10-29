@@ -12,6 +12,7 @@ Guide
     differences
     api
     example
+    upgrading
 
 
 Project Info

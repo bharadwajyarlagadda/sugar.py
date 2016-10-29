@@ -284,7 +284,7 @@ def exclude(array, value):
     return subtract(array, value)
 
 
-def filter(array, value=None, callback=None):
+def filter_(array, value=None, callback=None):
     """Returns list of elements in the :attr:`array` that match :attr:`value`.
     Also, returns list of elements based on the given callback method.
 
@@ -300,9 +300,9 @@ def filter(array, value=None, callback=None):
 
     Example:
 
-        >>> filter([1, 2, 2, 4], value=2)
+        >>> filter_([1, 2, 2, 4], value=2)
         [2, 2]
-        >>> filter([1, 2, 2, 4], callback=lambda x: x > 1)
+        >>> filter_([1, 2, 2, 4], callback=lambda x: x > 1)
         [2, 2, 4]
 
     .. versionadded:: TODO

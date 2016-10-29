@@ -9,7 +9,7 @@ Changelog
 - Add ``create()``.
 - Add ``every()``.
 - Add ``exclude()``.
-- Add ``filter()``.
+- Add ``filter_()``.
 - Add ``first()``.
 - Add ``from_()``.
 - Add ``includes()``.

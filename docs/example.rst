@@ -68,9 +68,9 @@ Arrays
     >>> _.exclude([11, 22, 33], [11, 22])
     [33]
 
-    >>> _.filter([1, 2, 2, 4], value=2)
+    >>> _.filter_([1, 2, 2, 4], value=2)
     [2, 2]
-    >>> _.filter([1, 2, 2, 4], callback=lambda x: x > 1)
+    >>> _.filter_([1, 2, 2, 4], callback=lambda x: x > 1)
     [2, 2, 4]
 
     >>> _.first([11, 22, 33, 44], 1)
