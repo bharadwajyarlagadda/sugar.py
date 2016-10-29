@@ -54,6 +54,27 @@ def is_multiple_of(value, num):
     return value % num == 0
 
 
+def is_odd(num):
+    """Returns True if :attr:`num` is odd.
+
+    Args:
+        num (int/float): Number passed in by the user.
+
+    Returns:
+        bool: True if :attr:`num` is odd else False
+
+    Example:
+
+        >>> is_odd(6)
+        False
+        >>> is_odd(7)
+        True
+
+    .. versionadded:: TODO
+    """
+    return num % 2 != 0
+
+
 def random_(n1=None, n2=None):
     """Returns a random integer/float from :attr:`n1` to :attr:`n2` (both
     inclusive)

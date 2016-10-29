@@ -161,6 +161,11 @@ Numbers
     >>> _.is_multiple_of(1.5, 0.5)
     True
 
+    >>> _.is_odd(6)
+    False
+    >>> _.is_odd(7)
+    True
+
     >>> result = _.random_(5, 6)
     >>> assert 5 <= result <= 6
     >>> result = _.random_(5)

@@ -35,6 +35,7 @@ from .arrays import (
 from .number import (
     is_even,
     is_multiple_of,
+    is_odd,
     random_
 )
 

@@ -21,6 +21,7 @@ Changelog
 - Add ``is_none()``.
 - Add ``is_multiple_of()``.
 - Add ``is_number()``.
+- Add ``is_odd()``.
 - Add ``is_string()``.
 - Add ``last()``.
 - Add ``random_()``.

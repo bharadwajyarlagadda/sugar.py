@@ -22,6 +22,14 @@ def test_is_multiple_of(value, num, expected):
     assert _.is_multiple_of(value, num) == expected
 
 
+@parametrize('num,expected', [
+    (6, False),
+    (7, True)
+])
+def test_is_odd(num, expected):
+    assert _.is_odd(num) == expected
+
+
 @parametrize('args', [
     (0, 5),
     (2, 5),
