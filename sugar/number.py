@@ -8,6 +8,39 @@ import math
 from ._compat import _range
 
 
+def armstrongs_between(n1=None, n2=None):
+    """Get all the armstrong numbers between :attr:`n1` and :attr:`n2`.
+
+    Args:
+        n1 (int): Number passed in by the user.
+        n2 (int): Number passed in by the user.
+
+    Returns:
+        list: List of all the armstrong numbers between :attr:`n1`, and
+            :attr:`n2`.
+
+    Example:
+
+        >>> armstrongs_between(0, 999)
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407]
+
+    .. versionadded:: TODO
+
+    .. note:: When you pass in different digit numbers, this method doesn't
+        get the armstrong numbers compared to the highest digit number passed
+        in.
+    """
+    n1 = 0 if not n1 else n1
+    n2 = 0 if not n2 else n2
+
+    max_value = max(n1, n2)
+    min_value = min(n1, n2)
+
+    return [num
+            for num in _range(min_value, max_value + 1)
+            if is_armstrong(num)]
+
+
 def is_armstrong(num):
     """Retursn True if :attr:`num` is armstrong number.
 

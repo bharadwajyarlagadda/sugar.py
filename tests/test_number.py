@@ -5,6 +5,13 @@ from .fixtures import parametrize
 import sugar as _
 
 
+@parametrize('case,expected', [
+    ((0, 999), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407])
+])
+def test_armstrongs_between(case, expected):
+    assert _.armstrongs_between(*case) == expected
+
+
 @parametrize('num,expected', [
     (371, True),
     (8208, True),

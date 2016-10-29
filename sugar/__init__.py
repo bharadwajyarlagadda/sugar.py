@@ -33,6 +33,7 @@ from .arrays import (
 )
 
 from .number import (
+    armstrongs_between,
     is_armstrong,
     is_even,
     is_multiple_of,

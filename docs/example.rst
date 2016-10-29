@@ -147,6 +147,9 @@ Numbers
 
     >>> import sugar as _
 
+    >>> _.armstrongs_between(0, 999)
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407]
+
     >>> _.is_armstrong(371)
     True
     >>> _.is_armstrong(8208)
