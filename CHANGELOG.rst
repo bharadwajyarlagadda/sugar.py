@@ -17,6 +17,7 @@ Changelog
 - Add ``is_boolean()``.
 - Add ``is_empty()``.
 - Add ``is_equal()``.
+- Add ``is_even()``.
 - Add ``is_none()``.
 - Add ``is_multiple_of()``.
 - Add ``is_number()``.

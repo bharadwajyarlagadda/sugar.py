@@ -7,6 +7,27 @@ import random
 import math
 
 
+def is_even(num):
+    """Returns True if :attr:`num` is even.
+
+    Args:
+        num (int/float): Number passed in by the user.
+
+    Returns:
+        bool: True if :attr:`num` is even else False
+
+    Example:
+
+        >>> is_even(6)
+        True
+        >>> is_even(7)
+        False
+
+    .. versionadded:: TODO
+    """
+    return num % 2 == 0
+
+
 def is_multiple_of(value, num):
     """Returns true if the :attr:`value` is a multiple of :attr:`num`.
 

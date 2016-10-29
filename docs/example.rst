@@ -147,6 +147,11 @@ Numbers
 
     >>> import sugar as _
 
+    >>> _.is_even(6)
+    True
+    >>> _.is_even(7)
+    False
+
     >>> _.is_multiple_of(6, 2)
     True
     >>> _.is_multiple_of(5, 2)

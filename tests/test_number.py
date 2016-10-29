@@ -5,6 +5,14 @@ from .fixtures import parametrize
 import sugar as _
 
 
+@parametrize('num,expected', [
+    (6, True),
+    (7, False)
+])
+def test_is_even(num, expected):
+    assert _.is_even(num) == expected
+
+
 @parametrize('value,num,expected', [
     (4, 2, True),
     (1.5, 0.5, True),
