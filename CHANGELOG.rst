@@ -2,30 +2,30 @@ Changelog
 =========
 
 
-- Add :func:`add`.
-- Add :func:`append`.
-- Add :func:`clone`.
-- Add :func:`compact`.
-- Add :func:`create`.
-- Add :func:`every`.
-- Add :func:`exclude`.
-- Add :func:`filter_`.
-- Add :func:`first`.
-- Add :func:`from_`.
-- Add :func:`includes`.
-- Add :func:`is_array`.
-- Add :func:`is_boolean`.
-- Add :func:`is_empty`.
-- Add :func:`is_equal`.
-- Add :func:`is_even`.
-- Add :func:`is_none`.
-- Add :func:`is_multiple_of`.
-- Add :func:`is_number`.
-- Add :func:`is_odd`.
-- Add :func:`is_prime`.
-- Add :func:`is_string`.
-- Add :func:`last`.
-- Add :func:`random_`.
+- Add ``add``.
+- Add ``append``.
+- Add ``clone``.
+- Add ``compact``.
+- Add ``create``.
+- Add ``every``.
+- Add ``exclude``.
+- Add ``filter_``.
+- Add ``first``.
+- Add ``from_``.
+- Add ``includes``.
+- Add ``is_array``.
+- Add ``is_boolean``.
+- Add ``is_empty``.
+- Add ``is_equal``.
+- Add ``is_even``.
+- Add ``is_none``.
+- Add ``is_multiple_of``.
+- Add ``is_number``.
+- Add ``is_odd``.
+- Add ``is_prime``.
+- Add ``is_string``.
+- Add ``last``.
+- Add ``random_``.
 
 
 v0.1.1 (2016-10-10)
@@ -39,7 +39,7 @@ v0.1.0 (2016-10-10)
 -------------------
 
 - First release.
-- Add :func:`average`.
-- Add :func:`construct`.
-- Add :func:`count`.
-- Add :func:`subtract`.
+- Add ``average``.
+- Add ``construct``.
+- Add ``count``.
+- Add ``subtract``.
