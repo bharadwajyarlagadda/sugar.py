@@ -230,3 +230,12 @@ Strings
     >>> _.at('example', [4, -10], True)
     ['p', 'p']
 
+    >>> _.camelize('example')
+    'Example'
+    >>> _.camelize('example-test')
+    'ExampleTest'
+    >>> _.camelize('example_test-one')
+    'ExampleTestOne',
+    >>> _.camelize('example_test-one', False)
+    'exampleTestOne'
+

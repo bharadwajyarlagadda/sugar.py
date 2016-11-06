@@ -3,7 +3,6 @@
 from .fixtures import parametrize
 
 import sugar as _
-import time
 
 
 @parametrize('case,index,loop,expected', [
@@ -18,3 +17,13 @@ import time
 ])
 def test_at(case, index, loop, expected):
     assert _.at(case, index, loop) == expected
+
+
+@parametrize('case,upper,expected', [
+    ('example', True, 'Example'),
+    ('example-test', True, 'ExampleTest'),
+    ('example_test-one', True, 'ExampleTestOne'),
+    ('example_test-one', False, 'exampleTestOne')
+])
+def test_camelize(case, upper, expected):
+    assert _.camelize(case, upper) == expected

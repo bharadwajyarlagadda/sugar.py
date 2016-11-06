@@ -47,9 +47,10 @@ From v0.1.0
     - :func:`sugar.predicates.is_string`.
 
 
-- 1 string method
+- 2 string methods
 
     - :func:`sugar.strings.at`.
+    - :func:`sugar.strings.camelize`.
 
 
 Improvements

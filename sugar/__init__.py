@@ -52,5 +52,6 @@ from .predicates import (
 )
 
 from .strings import (
-    at
+    at,
+    camelize
 )

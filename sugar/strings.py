@@ -55,3 +55,37 @@ def at(string, index=0, loop=False):
         return [string[get_index(i)] for i in index]
 
     return string[get_index(index)]
+
+
+def camelize(string, upper=True):
+    """Converts underscores and hyphens to camel case. If :attr:`upper` is
+    False, the :attr:`string` will be upperCamelCase.
+
+    Args:
+        string (str): String passed in by the user.
+        upper (bool): If True, it will return UpperCamelCase else
+            upperCamelCase.
+
+    Returns:
+        str: String converted to CamelCase.
+
+    Example:
+
+        >>> camelize('example')
+        'Example'
+        >>> camelize('example-test')
+        'ExampleTest'
+        >>> camelize('example_test-one')
+        'ExampleTestOne',
+        >>> camelize('example_test-one', False)
+        'exampleTestOne'
+
+    .. versionadded:: TODO
+    """
+    string = string.replace('_', '-')
+    string = ''.join([i.title() for i in string.split('-')])
+
+    if not upper:
+        string = string[:1].lower() + string[1:]
+
+    return string

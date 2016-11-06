@@ -6,6 +6,7 @@ Changelog
 - Add ``append``.
 - Add ``armstrongs_between``.
 - Add ``at``.
+- Add ``camelize``.
 - Add ``clone``.
 - Add ``compact``.
 - Add ``create``.
