@@ -76,7 +76,7 @@ def camelize(string, upper=True):
         >>> camelize('example-test')
         'ExampleTest'
         >>> camelize('example_test-one')
-        'ExampleTestOne',
+        'ExampleTestOne'
         >>> camelize('example_test-one', False)
         'exampleTestOne'
 
