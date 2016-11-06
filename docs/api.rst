@@ -20,4 +20,10 @@ Predicates
 .. automodule:: sugar.predicates
     :members:
 
+Strings
+-------
+
+.. automodule:: sugar.strings
+    :members:
+
     

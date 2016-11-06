@@ -208,3 +208,26 @@ Predicates
     >>> _.is_none([])
     False
 
+Strings
+-------
+
+.. code-block:: python
+
+    >>> import sugar as _
+
+    >>> at('example')
+    'e'
+    >>> at('example', 4)
+    'p'
+    >>> at('example', 8, True)
+    'x'
+    >>> at('example', [4, 8], True)
+    ['p', 'x']
+    >>> at('example', -4)
+    'm'
+    >>> at('example', [4, -4])
+    ['p', 'm']
+    >>> at('example', [4, -10], True)
+    ['p', 'p']
+
+    

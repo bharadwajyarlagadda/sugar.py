@@ -50,3 +50,7 @@ from .predicates import (
     is_number,
     is_string
 )
+
+from .strings import (
+    at
+)

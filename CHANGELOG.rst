@@ -5,6 +5,7 @@ Changelog
 - Add ``add``.
 - Add ``append``.
 - Add ``armstrongs_between``.
+- Add ``at``.
 - Add ``clone``.
 - Add ``compact``.
 - Add ``create``.
