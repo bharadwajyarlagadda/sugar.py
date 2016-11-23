@@ -89,3 +89,32 @@ def camelize(string, upper=True):
         string = string[:1].lower() + string[1:]
 
     return string
+
+
+def chars(string, callback=None):
+    """Runs :func:`callable` against each character in the string and returns
+    an array.
+
+    Args:
+        string (str): String passed in by the user.
+        callback (func): Method to be run against each character in the string.
+
+    Returns:
+        list: List of chars after the :func:`callback` method is applied to
+            all the chars in the given :attr:`string`.
+
+    Example:
+
+        >>> chars('example')
+        ['e', 'x', 'a', 'm', 'p', 'l', 'e']
+        >>> chars('example', lambda x: 'i' if x == 'e' else x)
+        ['i', 'x', 'a', 'm', 'p', 'l', 'i']
+
+    .. versionadded:: TODO
+    """
+    string = list(string)
+
+    if callback:
+        return [callback(char) for char in string]
+
+    return string

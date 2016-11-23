@@ -239,3 +239,8 @@ Strings
     >>> _.camelize('example_test-one', False)
     'exampleTestOne'
 
+    >>> _.chars('example')
+    ['e', 'x', 'a', 'm', 'p', 'l', 'e']
+    >>> _.chars('example', lambda x: 'i' if x == 'e' else x)
+    ['i', 'x', 'a', 'm', 'p', 'l', 'i']
+

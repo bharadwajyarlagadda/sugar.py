@@ -27,3 +27,13 @@ def test_at(case, index, loop, expected):
 ])
 def test_camelize(case, upper, expected):
     assert _.camelize(case, upper) == expected
+
+
+@parametrize('case,callback,expected', [
+    ('example', None, ['e', 'x', 'a', 'm', 'p', 'l', 'e']),
+    ('example',
+     lambda x: 'i' if x == 'e' else x,
+     ['i', 'x', 'a', 'm', 'p', 'l', 'i'])
+])
+def test_chars(case, callback, expected):
+    assert _.chars(case, callback) == expected
