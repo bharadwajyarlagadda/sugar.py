@@ -34,6 +34,7 @@ Changelog
 - Add ``last``.
 - Add ``random_``.
 - Add ``some``.
+- Add ``union``.
 
 
 v0.1.1 (2016-10-10)

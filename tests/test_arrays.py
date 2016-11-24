@@ -199,3 +199,12 @@ def test_some(array, value, callback, expected):
 ])
 def test_subtract(array, item, expected):
     assert _.subtract(array, item) == expected
+
+
+@parametrize('array,other,expected', [
+    ([1, 2, 3], [2, 3, 4], [1, 2, 3, 4]),
+    ([1, 2, 3], [4, 5, 6], [1, 2, 3, 4, 5, 6]),
+    (['a', 'b', 'c'], ['b', 'c', 'd'], ['a', 'b', 'c', 'd'])
+])
+def test_union(array, other, expected):
+    assert _.union(array, other) == expected

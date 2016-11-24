@@ -544,6 +544,31 @@ def subtract(array, item):
 
     return [element for element in array if element not in item]
 
+
+def union(array, other):
+    """Returns a new array containing elements in both arrays with duplicates
+    removed.
+
+    Args:
+        array (list): List passed in by the user.
+        other (list): Other list passed in by the user to compare.
+
+    Returns:
+        list: List of elements without duplicate values.
+
+    Example:
+
+        >>> union([1, 2, 3], [2, 3, 4])
+        [1, 2, 3, 4]
+        >>> union([1, 2, 3], [4, 5, 6])
+        [1, 2, 3, 4, 5, 6]
+        >>> union([1, 2, 3], [1, 2, 3])
+        [1, 2, 3]
+
+    .. versionadded:: TODO
+    """
+    return list(set(array + other))
+
 #
 # Helper methods not a part of the main API
 #

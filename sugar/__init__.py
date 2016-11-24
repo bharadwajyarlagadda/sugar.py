@@ -30,7 +30,8 @@ from .arrays import (
     is_equal,
     last,
     some,
-    subtract
+    subtract,
+    union
 )
 
 from .number import (
