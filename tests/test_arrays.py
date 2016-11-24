@@ -207,4 +207,4 @@ def test_subtract(array, item, expected):
     (['a', 'b', 'c'], ['b', 'c', 'd'], ['a', 'b', 'c', 'd'])
 ])
 def test_union(array, other, expected):
-    assert _.union(array, other) == expected
+    assert set(_.union(array, other)) == set(expected)
