@@ -487,6 +487,33 @@ def last(array, num=1):
     return array[(len(array) - num):]
 
 
+def some(array, search, callback=None):
+    """Returns true if :attr:`search` is true for any element in the given
+    array.
+
+    Args:
+        array (list): List of values passed in by the user.
+        search (mixed): A value to be searched in the given list.
+        callback (func): Function that cacn be called on each element in the
+            given list.
+
+    Returns:
+        bool: True if any of the elements matches the given :attr:`search`
+            value else False.
+
+    Example:
+
+        >>> some([1, 2, 3], 1)
+        True
+        >>> some([1, 2, 3], None, callback=lambda x: x == 1)
+        True
+
+    .. versionadded:: TODO
+    """
+    return (any(callback(value) for value in array) if callable(callback)
+            else any(value == search for value in array))
+
+
 def subtract(array, item):
     """Subtracts :attr:`item` from the :attr:`array` and returns the result
     as a new array. If :attr:`item` is also an array, all elements in it will

@@ -181,6 +181,17 @@ def test_last(array, num, expected):
     assert _.last(array, num) == expected
 
 
+@parametrize('array,value,callback,expected', [
+    ([2, 2, 2], 2, None, True),
+    ([2, 3, 4], 2, None, True),
+    ([1, 2, 3, 4], 5, None, False),
+    (['a', 'b', 'c'], 'a', None, True),
+    (['a', 'b', 'c'], None, lambda x: x == 'c', True)
+])
+def test_some(array, value, callback, expected):
+    assert _.some(array, value, callback) == expected
+
+
 @parametrize('array,item,expected', [
     ([1, 2, 3], 3, [1, 2]),
     ([1, 2, 3], [1, 3], [2]),

@@ -133,6 +133,11 @@ Arrays
     >>> _.last([11, 22, 33, 44], 9)
     []
 
+    >>> _.some([1, 2, 3], 1)
+    True
+    >>> _.some([1, 2, 3], None, callback=lambda x: x == 1)
+    True
+
     >>> _.subtract([1, 2, 3], 2)
     [1, 3]
     >>> _.subtract ([1, 2, 3], [1, 3])

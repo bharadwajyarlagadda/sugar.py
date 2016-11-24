@@ -29,6 +29,7 @@ from .arrays import (
     is_empty,
     is_equal,
     last,
+    some,
     subtract
 )
 

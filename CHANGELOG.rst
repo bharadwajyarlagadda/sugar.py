@@ -33,6 +33,7 @@ Changelog
 - Add ``primes_between``.
 - Add ``last``.
 - Add ``random_``.
+- Add ``some``.
 
 
 v0.1.1 (2016-10-10)

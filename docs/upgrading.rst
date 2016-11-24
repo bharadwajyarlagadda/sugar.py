@@ -8,7 +8,7 @@ Upgrading
 From v0.1.0
 ===========
 
-- 14 array methods
+- 15 array methods
 
     - :func:`sugar.arrays.add`.
     - :func:`sugar.arrays.append`.
@@ -24,6 +24,7 @@ From v0.1.0
     - :func:`sugar.arrays.is_empty`.
     - :func:`sugar.arrays.is_equal`.
     - :func:`sugar.arrays.last`.
+    - :func:`sugar.arrays.some`.
 
 
 - 9 number methods
