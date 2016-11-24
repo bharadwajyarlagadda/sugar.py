@@ -41,8 +41,32 @@ def armstrongs_between(n1=None, n2=None):
             if is_armstrong(num)]
 
 
+def hex_(value, pad=None):
+    """Converts a given number to hexi-decimal.
+
+    Args:
+        value (int): Value passed in by the user.
+        pad (int): Padding till the result can be restricted.
+
+    Returns:
+        hex: A hex value that corresponds to the given number.
+
+    Example:
+
+        >>> hex_(55)
+        '0x37'
+        >>> hex_(555)
+        '0x22b'
+        >>> hex_(555, 2)
+        '0x'
+
+    .. versionadded:: TODO
+    """
+    return hex(value)[0:pad]
+
+
 def is_armstrong(num):
-    """Retursn True if :attr:`num` is armstrong number.
+    """Returns True if :attr:`num` is armstrong number.
 
     Args:
         num (int): Number passed in by the user.

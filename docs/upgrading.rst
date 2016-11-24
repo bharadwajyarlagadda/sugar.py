@@ -26,9 +26,10 @@ From v0.1.0
     - :func:`sugar.arrays.last`.
 
 
-- 8 number methods
+- 9 number methods
 
     - :func:`sugar.number.armstrongs_between`.
+    - :func:`sugar.number.hex_`.
     - :func:`sugar.number.is_armstrong`.
     - :func:`sugar.number.is_even`.
     - :func:`sugar.number.is_multiple_of`.

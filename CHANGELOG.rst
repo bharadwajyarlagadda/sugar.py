@@ -16,6 +16,7 @@ Changelog
 - Add ``filter_``.
 - Add ``first``.
 - Add ``from_``.
+- Add ``hex_``.
 - Add ``includes``.
 - Add ``is_armstrong``.
 - Add ``is_array``.

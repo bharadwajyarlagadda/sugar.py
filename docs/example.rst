@@ -150,6 +150,13 @@ Numbers
     >>> _.armstrongs_between(0, 999)
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407]
 
+    >>> _.hex_(55)
+    '0x37'
+    >>> _.hex_(555)
+    '0x22b'
+    >>> _.hex_(555, 2)
+    '0x'
+
     >>> _.is_armstrong(371)
     True
     >>> _.is_armstrong(8208)

@@ -34,6 +34,7 @@ from .arrays import (
 
 from .number import (
     armstrongs_between,
+    hex_,
     is_armstrong,
     is_even,
     is_multiple_of,

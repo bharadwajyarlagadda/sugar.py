@@ -12,6 +12,15 @@ def test_armstrongs_between(case, expected):
     assert _.armstrongs_between(*case) == expected
 
 
+@parametrize('value,pad,expected', [
+    (55, None, '0x37'),
+    (555, None, '0x22b'),
+    (555, 2, '0x')
+])
+def test_hex(value, pad, expected):
+    assert _.hex_(value, pad) == expected
+
+
 @parametrize('num,expected', [
     (371, True),
     (8208, True),
